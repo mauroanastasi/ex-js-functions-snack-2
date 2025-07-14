@@ -28,3 +28,23 @@ const quadrato = (n) => n * n
 console.log(quadrato(5))
 
 // snack 3
+function piu(j, h) {
+    return j + h
+}
+
+function eseguiOperazione(n, m, operazione) {
+    return operazione(n, m)
+}
+
+console.log(eseguiOperazione(4, 5, piu))
+
+// oppure
+
+const somma = (n, m) => n + m;
+
+const eseguiOperazione = (n, m, operazione) => operazione(n, m)
+
+
+console.log(eseguiOperazione(4, 5, somma));
+
+// snack 4
