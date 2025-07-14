@@ -5,8 +5,6 @@ function somma(a, b) {
     return a + b
 }
 
-
-
 // -------------------------------------------
 
 const anotherSomma = function (c, d) {
@@ -23,3 +21,10 @@ const sum = (c, d) => {
 
 console.log(sum(4, 4))
 
+// snack 2
+
+const quadrato = (n) => n * n
+
+console.log(quadrato(5))
+
+// snack 3
