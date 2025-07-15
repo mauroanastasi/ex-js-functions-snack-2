@@ -40,11 +40,24 @@ console.log(eseguiOperazione(4, 5, piu))
 
 // oppure
 
-const somma = (n, m) => n + m;
+const add = (n, m) => n + m;
 
-const eseguiOperazione = (n, m, operazione) => operazione(n, m)
+const eseguiOperazionex = (n, m, operazione) => operazione(n, m)
 
 
-console.log(eseguiOperazione(4, 5, somma));
+console.log(eseguiOperazionex(4, 5, add));
 
 // snack 4
+
+function creaTimer(tempo) {
+    return function () {
+        setTimeout(() => {
+            console.log(`Tempo scaduto!`)
+        }, tempo)
+    }
+}
+
+const timer = creaTimer(1000);
+timer()
+
+// snack 5
