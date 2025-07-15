@@ -107,3 +107,16 @@ const ferma = () => {
 ferma()
 
 // snack 7
+
+let ora = eseguiEferma("questo mex è stampato a intervalli regolari", 1000, 7000)
+
+function eseguiEferma(messaggio, tempoAvvio, tempoStop) {
+    // assegno a clockId il setInterval così facendo salvo nella variabile il suo Id
+    const clockId = setInterval(() => {
+        console.log(messaggio)
+    }, tempoAvvio)
+    setTimeout(() => {
+        clearInterval(clockId)
+    }, tempoStop)
+}
+
