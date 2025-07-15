@@ -61,3 +61,22 @@ const timer = creaTimer(1000);
 timer()
 
 // snack 5
+const tempo = stamp("questo messaggio verrà stampato ogni secondo")
+
+function stamp(message) {
+    return setInterval(() => {
+        console.log(message)
+    }, 1000)
+}
+
+// funzione con setTimeout che imposta il clarInterval dopo 3000ms dal suo avvio
+const stop = () => {
+    setTimeout(() => {
+        clearInterval(tempo)
+
+    }, 3000)
+}
+
+stop()
+
+// snack 6
