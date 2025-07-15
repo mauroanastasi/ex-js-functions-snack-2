@@ -80,3 +80,30 @@ const stop = () => {
 stop()
 
 // snack 6
+
+function creaContatoreAutomatico(tempo) {
+    let count = 0;
+    return function () {
+        return setInterval(() => {
+            count++;
+            console.log(count)
+        }, tempo)
+    }
+}
+
+// effettuando una doppia chiamata sulla funzione, riesco a eseguire anche la funzione interna anonima di creaContatoreAutomatico, così facendo posso assegnare l'id del setInterval che restituisce la funzione anonima in temp e utilizzarlo nel clearInterval per bloccare il contatore
+let temp = creaContatoreAutomatico(2000)()
+
+// altrimenti, senza la doppia coppia di parentesi tonde, mettendo solo quella contente il 2000, veniva effettuata solo una chiamta, la chiamata che restituiva la funzione annidata, non il suo risultato ossia il setInterval, e avrei poi dovuto effettuare la seconda chiamata assegnando il risultato a una nuova variabile
+// salvo l'id in setInterval per poi usarlo in clearInterval
+// const intervalId = temp()
+
+const ferma = () => {
+    setTimeout(() => {
+        clearInterval(temp)
+    }, 6000)
+}
+
+ferma()
+
+// snack 7
